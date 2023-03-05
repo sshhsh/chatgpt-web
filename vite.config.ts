@@ -11,6 +11,7 @@ export default defineConfig((env) => {
         '@': path.resolve(process.cwd(), 'src'),
       },
     },
+    base: './',
     plugins: [vue()],
     server: {
       host: '0.0.0.0',

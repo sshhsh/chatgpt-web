@@ -7,7 +7,7 @@ export function fetchChatAPI<T = any>(
   signal?: GenericAbortSignal,
 ) {
   return post<T>({
-    url: '/chat',
+    url: 'chat',
     data: { prompt, options },
     signal,
   })
@@ -15,7 +15,7 @@ export function fetchChatAPI<T = any>(
 
 export function fetchChatConfig<T = any>() {
   return post<T>({
-    url: '/config',
+    url: 'config',
   })
 }
 
@@ -27,7 +27,7 @@ export function fetchChatAPIProcess<T = any>(
     onDownloadProgress?: (progressEvent: AxiosProgressEvent) => void },
 ) {
   return post<T>({
-    url: '/chat-process',
+    url: 'chat-process',
     data: { prompt: params.prompt, options: params.options },
     signal: params.signal,
     onDownloadProgress: params.onDownloadProgress,
